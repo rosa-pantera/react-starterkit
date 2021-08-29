@@ -1,9 +1,11 @@
 {
-	"name": "incakeofemergency.nl",
-	"version": "0.1.0",
 	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
 	"dependencies": {
-		"@craco/craco": "^6.2.0",
 		"@headlessui/react": "^1.4.0",
 		"@heroicons/react": "^1.0.4",
 		"@reduxjs/toolkit": "^1.6.1",
@@ -11,40 +13,14 @@
 		"@tailwindcss/forms": "^0.3.3",
 		"@tailwindcss/line-clamp": "^0.2.1",
 		"@tailwindcss/typography": "^0.4.1",
+		"next": "latest",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-redux": "^7.2.4",
-		"react-router-dom": "^5.2.0",
-		"react-scripts": "4.0.3",
-		"web-vitals": "^1.1.2"
-	},
-	"scripts": {
-		"start": "craco start",
-		"build": "craco build",
-		"test": "craco test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+		"react-redux": "^7.2.4"
 	},
 	"devDependencies": {
-		"autoprefixer": "^9.8.6",
-		"postcss": "^7.0.36",
-		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
+		"autoprefixer": "^10.3.3",
+		"postcss": "^8.3.6",
+		"tailwindcss": "^2.2.8"
 	}
 }
