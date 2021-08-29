@@ -16,13 +16,13 @@ const App = () => {
 					<Route path="/somethings">
 						<SomePage />
 					</Route>
-					<Route path='*'>
+					<Route path="*">
 						<NotFound />
 					</Route>
 				</Switch>
 			</Suspense>
 		</Layout>
 	);
-}
+};
 
 export default App;
