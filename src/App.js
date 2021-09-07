@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
 
 const SomePage = lazy(() => import("./pages/SomePage"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 const App = () => {
 	return (
@@ -17,7 +17,7 @@ const App = () => {
 						<SomePage />
 					</Route>
 					<Route path="*">
-						<NotFound />
+						<NotFoundPage />
 					</Route>
 				</Switch>
 			</Suspense>
