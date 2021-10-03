@@ -2,6 +2,7 @@ import { FormattedMessage } from 'react-intl';
 import { useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";
 import Card from '../components/ui/Card';
+import ListContainer from '../components/ui/ListContainer';
 import { getDateTime, getTimePassed } from '../utils/dates';
 
 const TodoPage = () => {
@@ -10,13 +11,9 @@ const TodoPage = () => {
 	const todos = useSelector(state => state.todos.todos);
 	const todo = todos.find(todo => todo.id.toString() === params.todoId);
 
-	const createdDate = new Date(todo.createdAt);
-	const dateTime = getDateTime(createdDate, false);
-	const timePassed = getTimePassed(createdDate);
-
 	if (!todo) {
 		return (
-			<Card padding={true} flex={false}>
+			<Card>
 				<p className="text-gray-900 dark:text-white">
 					<FormattedMessage
 						id="pages.todopage.notfound"
@@ -31,8 +28,12 @@ const TodoPage = () => {
 		);
 	}
 
+	const createdDate = new Date(todo.createdAt);
+	const dateTime = getDateTime(createdDate, false);
+	const timePassed = getTimePassed(createdDate);
+
 	return (
-		<Card padding={false} flex={false}>
+		<ListContainer>
 			<div className="px-4 py-5 sm:px-6">
 				<h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">{todo.text}</h3>
 				<p className="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-400">
@@ -73,7 +74,7 @@ const TodoPage = () => {
 					</div>
 				</dl>
 			</div>
-		</Card>
+		</ListContainer>
 	);
 };
 
