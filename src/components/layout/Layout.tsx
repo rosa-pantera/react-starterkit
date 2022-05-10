@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Header from "./Header";
 
-const Layout: FC<{ title: JSX.Element }> = (props) => {
+const Layout: FC<{ title: JSX.Element, children: any }> = (props) => {
 	return (
 		<div className="min-h-screen bg-gray-100 dark:bg-gray-700">
 			<Header title={props.title} />

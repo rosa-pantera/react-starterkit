@@ -156,9 +156,10 @@ const SettingsPage = () => {
 						<Menu.Items className="origin-top-right z-10 absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-900 ring-1 ring-black ring-opacity-5 focus:outline-none">
 							<div className="py-1">
 								{languages.map(language =>
-									<Menu.Item key={language.key} onClick={() => changeLocaleHandler(language.locale)}>
+									<Menu.Item key={language.key}>
 										{({ active }) => (
 											<div
+												onClick={() => changeLocaleHandler(language.locale)}
 												className={classNames(
 													active ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200' : 'text-gray-700 dark:text-gray-300',
 													'flex justify-between px-4 py-2 text-sm'
